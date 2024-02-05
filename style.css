@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0C0C0C !important;
+    color: white !important;
+}
+
+.nav-item {
+    margin: 10px 20px;
+}
+
+.nav-link {
+    color: white !important;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600 !important;
+    position: relative;
+}
+
+.nav-link::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    transition: all 0.5s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+.navbar-scrolled{
+    background-color: rgb(5, 5, 5);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15); 
+}
+.active{
+    background-color: rgb(196, 120, 237) !important;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+        justify-content: space-around;
+
+    }
+
+}
+
+@media (max-width:992px) {
+    #offcanvasNavbar {
+        background-color: #7a2ec6 !important;
+        width: 200px !important;
+    }
+
+}
+
+#hero {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+.content {
+    margin-top: 20vh;
+    width: 100%;
+}
+
+.bg-logo {
+    border-radius: 20%;
+    height: 80vh;
+    width: 60vh;
+}
+
+.name {
+    word-spacing: 3px;
+    line-height: 3.5rem;
+    width: 100vw;
+}
+
+.btn {
+    padding: 10px 20px !important;
+    background-color: #8c16db !important;
+    color: white;
+    border-radius: 10px;
+    margin: 10px;
+    transition: transform 0.5s;
+    border: none;
+}
+
+.btn a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+
+}
+
+.btn:hover {
+    opacity: 0.8;
+    background-color: #ff004f !important;
+    transform: translateY(10px);
+
+}
+
+.btn a:hover {
+    color: rgb(0, 0, 0) !important;
+}
+
+/* about */
+
+#about {
+    /* border-top: 1px solid rgb(102, 101, 101); */
+    margin-bottom: 200px;
+}
+
+.About {
+    margin-top: 100px;
+}
+
+.about-content {
+    padding:auto;
+}
+
+.about-content h5 {
+    font-size: 50px;
+    font-weight: 800;
+    color: #a462e7;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+}
+
+.about-content p {
+    color: rgb(171, 167, 167);
+    font-weight: 600;
+    word-spacing: 3px;
+    width: 80%;
+}
+
+.tab-links {
+    position: relative;
+    cursor: pointer;
+    width: 50px;
+    height: 4px;
+    text-align: center;
+}
+
+.tab-links::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: #ff004f;
+    position: absolute;
+    left: 0;
+    margin: 5px;
+    transition: all 0.5s;
+}
+
+.tab-links:hover::after {
+    width: 40px !important;
+}
+
+.accordion-item:last-of-type .accordion-button.collapsed {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+}
+.accordion-body{
+    background-color: #44035c;
+    padding: 20px !important;
+    font-weight: 500;
+    border-radius: 10px;
+    border: none;
+}
+
+.skills {
+    font-size: 20px;
+    color: #ff004f;
+    font-weight: 500;
+}
+
+#education {
+    color: rgb(197, 197, 197);
+    font-weight: 500;
+}
+
+#experience {
+    color: rgb(197, 197, 197);
+    font-weight: 500;
+}
+
+@media screen and (max-width:992px) {
+
+    .accordion-item:last-of-type .accordion-button.collapsed {
+        display: flex;
+        align-content: center;
+        flex-direction: row;
+    }
+}
+
+/* Project */
+
+#project{
+    
+    padding: 100px 120px;
+}
+.project-heading{
+    font-size: 40px;
+    font-weight: 800;
+    color: #a462e7;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+} 
+.project-img1 img{
+    border-radius: 10px;
+    width: 100%;
+    transition: transform 0.5s;
+}
+
+.project-img1{
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.layer{
+    width:100%;
+    height:0;
+    background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
+    border-radius: 10px;
+    position:absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 30px;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.layer a{
+    margin-top: 15px;
+    color: #a462e7;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background-color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.project-img1:hover img{
+    transform: scale(1.1);
+}
+
+.project-img1:hover .layer{
+    height: 100%;
+}
+ @media screen and (max-width:992px) {
+    #project{
+        padding: 0;
+    }
+    
+    
+ }
+/* contact */
+
+#contact{
+    margin-top:50px;
+    color: white;
+    padding: 150px 140px;
+}
+.contact-content h3{
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.contact-content h3::after{
+    content: "";
+    width:0px;
+    height:8px;
+    background-color: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transition: width 0.5s;
+}
+.contact-content h3:hover::after{
+    width: 200px;
+}
+
+.contact-content p{
+    font-size: 18px;
+    padding: 5px;
+}
+.contact-content p i{
+    color: #ff004f;
+}
+.icons a{
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    
+}
+.icons i{
+    font-size: 25px;
+    margin: 5px;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+.icons i:hover{
+    transform: translateY(-5px);
+    color: #ff004f;
+}
+
+.form-control {
+  
+    border-radius: var(--bs-border-radius);
+    border: none !important;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    height: 50px;
+    overflow: hidden;
+    font-weight: 500;
+}
+#exampleFormControlInput1 , #exampleFormControlTextarea1{
+    font-weight: 600;
+}
+
+.Copyright{
+    text-align: center;
+    background-color: rgb(184, 181, 181);
+    color: #0C0C0C;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+@media screen and (max-width:992px) {
+    #contact{
+        padding: 0;
+    }  
+}
+
